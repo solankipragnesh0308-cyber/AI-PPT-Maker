@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI PPT Maker — Phase 6</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="app">
+<header><h1>AI PPT Maker</h1><span>Phase 6 • Production-ready architecture</span></header>
+<main>
+<section class="card">
+<h2>Create Presentation</h2>
+<label>Topic<input id="topic" placeholder="e.g. Sustainable Concrete"></label>
+<div class="grid">
+<label>Slides<input id="slides" type="number" min="2" max="30" value="8"></label>
+<label>Language<select id="language"><option>English</option><option>Hindi</option><option>Gujarati</option></select></label>
+<label>Level<select id="level"><option>Diploma</option><option>Undergraduate</option><option>Professional</option></select></label>
+<label>AI Provider<select id="provider"><option value="gemini">Gemini</option><option value="openai">GPT</option><option value="anthropic">Claude</option></select></label>
+<label>Theme<select id="theme"><option>Professional</option><option>Academic</option><option>Civil Engineering</option><option>Research</option></select></label>
+</div>
+<button onclick="generate()">Generate PPT Content</button><p id="status"></p>
+</section>
+<section class="card"><h2>Slide Editor</h2><div id="editor">Generate content first.</div>
+<button onclick="makePpt()">Export PPTX</button><a id="download" class="download"></a></section>
+<section class="card"><h2>Nano Banana Image Studio</h2>
+<textarea id="imagePrompt" placeholder="Describe the image/diagram you want..."></textarea>
+<button onclick="makeImage()">Generate Image</button><img id="preview" class="preview"></section>
+</main></div><script src="/static/app.js"></script></body></html>
